@@ -1,0 +1,60 @@
+<html>
+    <title> GST Calcuator </title>
+<body>
+
+<form onsubmit="return tcalc();">
+    <h1>GST Calculator</h1>
+    <table>
+      <tr>
+        <td>Price</td>
+        <td>
+          <input type="number" min="0" max="9999" step="0.01"
+                 id="taxprice"  oninput="tcalc(this.value)"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Tax Percentage</td>
+        <td>
+             <input type="text"  name="GST" id="taxperc" list="taxperc1" value="0" oninput="calc(this.value) "/>
+            <input type="radio" name="grpGender" value="5" id="5" oninput="tcalc(this.value)" >5
+            <input type="radio" name="grpGender" value="12" id="12" oninput="tcalc(this.value)">12
+            <input type="radio" name="grpGender" value="18" id="18" oninput="tcalc(this.value)">18
+            <input type="radio" name="grpGender" value="28" id="28" oninput="tcalc(this.value)">28
+          </td>
+      </tr>
+   
+      <tr>
+        <td>Tax Amount (IGST)</td>
+        <td>
+          <input type="text"  id="taxamt" value="0"/>
+        </td>
+      </tr>
+   
+      <tr>
+        <td>CGST</td>
+        <td>
+          <input type="text"  id="CGST" value="0"/>
+        </td>
+      </tr>
+      <tr>
+        <td>SGST</td>
+        <td>
+          <input type="text"  id="SGST" value="0"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Total With Tax</td>
+        <td>
+          <input type="text"  id="taxgrand" value="0"/>
+        </td>
+      </tr>
+    </table>
+   
+    <input type="submit" value="calculate!"/>
+  </form>
+    </body>
+    <script src="./js/main.js">
+        
+    </script>
+    </html>
